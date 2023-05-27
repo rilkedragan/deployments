@@ -1,6 +1,6 @@
 node{
     def gitCredentialsId = params.credentialsId
-    def IMAGE_REPO_NAME = params.service
+    
    
  timestamps {
 
