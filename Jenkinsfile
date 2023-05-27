@@ -26,7 +26,7 @@ node{
           sh "git clone https://rilkedragan:Pipica14@github.com/rilkedragan/deployments"
           sh "git config --global user.email \"dragan.rilke@gmail.com\""
           sh "git config --global user.name \"Dragan Rilke\""
-          sh "sed -i \"s/rc1-.*/rc1-${GIT_COMMIT}/\" cts-deploy.yaml && git add . && git commit -m \"Deploy ${service_to_build} ${GIT_COMMIT} to dev\" && git push origin main"
+          sh "cd  deployments && sed -i \"s/rc1-.*/rc1-${GIT_COMMIT}/\" cts-deploy.yaml && git add . && git commit -m \"Deploy ${service_to_build} ${GIT_COMMIT} to dev\" && git push origin main"
       }
  }
 }
