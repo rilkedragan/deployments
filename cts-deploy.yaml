@@ -27,6 +27,6 @@ spec:
     spec:
       containers:
       - name: cts-container
-        image: gcr.io/radiant-land-387911/ctsapp:v1
+        image: gcr.io/radiant-land-387911/ctsapp:rc1-1213434
         ports:
         - containerPort: 5000
