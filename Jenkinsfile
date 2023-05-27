@@ -11,6 +11,12 @@ node{
        branchName = params.branchName
        service_to_build = "CTS"
     }
+    stage('Checkout package repo') {
+        cleanWs()
+        git branch: branchName,
+            credentialsId: github_cred,
+            url: gitSourcePath
+            }  
     }
     stage('Build Docker image'){
           GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
