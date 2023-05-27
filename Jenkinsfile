@@ -25,7 +25,7 @@ node{
           sh "echo Deploying to Production.."
           sh "git clone git@github.com:rilkedragan/deployments"
           sh "git remote set-url origin git@github.com:rilkedragan/deployments.git"
-          sh "cd  deployments && sed -i \"s/rc1-.*/rc1-${GIT_COMMIT}/\" cts-deploy.yaml && git add . && git commit -m \"Deploy ${service_to_build} ${GIT_COMMIT} to dev\" && git push origin main"
+          sh "cd  deployments/cts-app && sed -i \"s/rc1-.*/rc1-${GIT_COMMIT}/\" cts-deploy.yaml && git add . && git commit -m \"Deploy ${service_to_build} ${GIT_COMMIT} to dev\" && git push origin main"
       }
  }
 }
