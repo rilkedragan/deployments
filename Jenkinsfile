@@ -23,7 +23,7 @@ node{
           sh "docker build -t gcr.io/radiant-land-387911/ctsapp:${GIT_COMMIT} ."
           sh "docker push gcr.io/radiant-land-387911/ctsapp:${GIT_COMMIT}"
           sh "echo Deploying to Production.."
-          sh "git clone https://github.com/rilkedragan/deployments"
+          sh "git clone https://rilkedragan@github.com/rilkedragan/deployments"
           sh "git config --global user.email \"dragan.rilke@gmail.com\""
           sh "git config --global user.name \"Dragan Rilke\""
           sh "cd  deployments && sed -i \"s/rc1-.*/rc1-${GIT_COMMIT}/\" cts-deploy.yaml && git add . && git commit -m \"Deploy ${service_to_build} ${GIT_COMMIT} to dev\" && git push origin main"
