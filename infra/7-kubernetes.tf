@@ -1,4 +1,3 @@
-# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster
 resource "google_container_cluster" "primary" {
   name                     = "primary"
   location                 = "us-central1-a"
