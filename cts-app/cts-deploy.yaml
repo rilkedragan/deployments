@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: cts-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: cts-app
