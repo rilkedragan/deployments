@@ -23,7 +23,9 @@ Terraform code used for building private standard GKE cluster with 2 node pools 
 ![image](https://github.com/rilkedragan/deployments/assets/126792923/7351d3a4-66a0-41f6-a26b-75902cc6c94c)
 
  On the GKE cluster there is Argocd application deployed that automatically detects changes in the deployment file pushed to the deployment repository and apply change to the app.
- ![image](https://github.com/rilkedragan/deployments/assets/126792923/67e5c7db-0d85-4e44-8045-454ba2e2f711)
+ 
+![image](https://github.com/rilkedragan/deployments/assets/126792923/67e5c7db-0d85-4e44-8045-454ba2e2f711)
+ 
 ![image](https://github.com/rilkedragan/deployments/assets/126792923/f19241dc-35e2-429c-9129-5feb4545aafc)
 
  
