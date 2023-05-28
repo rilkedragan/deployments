@@ -20,8 +20,8 @@ node{
     }
     stage('Build Docker image'){
           GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
-          sh "docker build -t gcr.io/radiant-land-387911/ctsapp:rc1-${GIT_COMMIT} ."
-          sh "docker push gcr.io/radiant-land-387911/ctsapp:rc1-${GIT_COMMIT}"
+          sh "docker build -t us.gcr.io/radiant-land-387911/ctsapp:rc1-${GIT_COMMIT} ."
+          sh "docker push us.gcr.io/radiant-land-387911/ctsapp:rc1-${GIT_COMMIT}"
           sh "echo Deploying to Production.."
           sh "git clone git@github.com:rilkedragan/deployments"
           sh "git remote set-url origin git@github.com:rilkedragan/deployments.git"
