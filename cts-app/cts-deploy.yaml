@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: cts-app
-        image: us.gcr.io/radiant-land-387911/ctsapp:rc1-c3e5c12
+        image: us.gcr.io/radiant-land-387911/ctsapp:rc1-f976f74
         resources:
           requests:
             cpu: "250m"
