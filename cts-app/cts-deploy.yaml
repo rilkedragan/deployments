@@ -30,3 +30,5 @@ spec:
         image: us.gcr.io/radiant-land-387911/ctsapp:rc1-0fc8d89
         ports:
         - containerPort: 5000
+      imagePullSecrets:
+        - name: pull-image
