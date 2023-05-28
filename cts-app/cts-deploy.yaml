@@ -28,5 +28,6 @@ spec:
       containers:
       - name: cts-container
         image: us.gcr.io/radiant-land-387911/ctsapp:rc1-0fc8d89
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
