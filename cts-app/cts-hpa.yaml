@@ -8,7 +8,7 @@ spec:
    apiVersion: apps/v1
    kind: Deployment
    name: cts-app
- minReplicas: 2
+ minReplicas: 3
  metrics:
     - resource:
         name: cpu
@@ -16,4 +16,4 @@ spec:
           averageUtilization: 85
           type: Utilization
       type: Resource
- maxReplicas: 4
+ maxReplicas: 6
