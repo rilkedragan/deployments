@@ -10,6 +10,10 @@ Repository for storing all code related to devops
 Terraform code used for building private standard GKE cluster with 2 node pools in VPC and private subnets. One node pool is defined as general with autoscaling enabled and the other is "spot" node pool for deploying fault-tolerant services. Router is defined to NAT all traffic coming out of instances. This solution automatically scales number of nodes and combined with HPA resource for the Kubernetes deployment it should handle all scaling.
 Terraform state is kept locally for this exercize, for production use it should be set to use remote bucket for backend. Also, for some more generative solution variables should be used.
 
+![image](https://github.com/rilkedragan/deployments/assets/126792923/12f7b1dd-0e1d-47a2-bf19-cfcf01e4a1ba)
+
+![image](https://github.com/rilkedragan/deployments/assets/126792923/7306e2c7-0929-44d5-80cc-c1af91374e98)
+
 
 ## Jenkinsfile - used for Jenkins CICD job  
 
