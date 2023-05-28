@@ -14,6 +14,7 @@ Terraform code used for building private standard GKE cluster with 2 node pools 
 
  Jenkinsfile is using scripted defined CICD pipeline. It is parametrized and it builds Docker image, pushes to Google Container Registry, checkout deployment files form the separate repo, change the tag version   in the deployment file and pushes back code to the deployment repo.
  Source code is pulled from Github repository and job is triggered on every code push by configured Webhook on the Github project side.
+ __Screenshots showing Jenkins and Github setup__
  ![image](https://github.com/rilkedragan/deployments/assets/126792923/53b1cddd-b6d2-4a70-b325-4b9db3832791)
 
 ![image](https://github.com/rilkedragan/deployments/assets/126792923/177db9b4-fcd6-421b-bc3b-f3100c888657)
@@ -22,7 +23,11 @@ Terraform code used for building private standard GKE cluster with 2 node pools 
 
 ![image](https://github.com/rilkedragan/deployments/assets/126792923/7351d3a4-66a0-41f6-a26b-75902cc6c94c)
 
- On the GKE cluster there is Argocd application deployed that automatically detects changes in the deployment file pushed to the deployment repository and apply change to the app.
+![image](https://github.com/rilkedragan/deployments/assets/126792923/8c503294-27be-4c00-b2ae-a5c4205be61a)
+
+![image](https://github.com/rilkedragan/deployments/assets/126792923/4a1ae29d-745c-4ee3-ab4f-381d52dc38ba)
+
+ On the GKE cluster there is __Argocd__ application deployed that automatically detects changes in the deployment file pushed to the deployment repository and apply change to the app.
  
 ![image](https://github.com/rilkedragan/deployments/assets/126792923/67e5c7db-0d85-4e44-8045-454ba2e2f711)
  
