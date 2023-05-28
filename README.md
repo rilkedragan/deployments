@@ -14,4 +14,4 @@ Terraform code used for building private cluster with 2 node pools in VPC and pr
 
  Jenkinsfile is using scripted defined CICD pipeline. It is parametrized and it builds Docker image, pushes to Google Container Registry, checkout deployment files form the separate repo, change the tag version in the deployment file and pushes back code to the deployment repo.
  Source code is pulled from Github repository and job is triggered on every code push by configured Webhook on the Github project side.
-  
+ On the GKE cluster there is Argocd application deployed that automatically detects changes in the deployment file pushed to the deployment repository and apply change to the app.
