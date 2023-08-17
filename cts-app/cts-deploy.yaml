@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cts-app
+spec:
+  selector:
+    app: cts-app
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cts-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cts-app
+  template:
+    metadata:
+      labels:
+        app: cts-app
+    spec:
+      containers:
+      - name: cts-app
+        image: us.gcr.io/radiant-land-387911/ctsapp:rc1-f976f74
+        resources:
+          requests:
+            cpu: "250m"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
